@@ -1,22 +1,16 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendResetEmail = async (to, link) => {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
-    }
-  });
-
-  await transporter.sendMail({
-    from: `"Memento" <${process.env.EMAIL_USER}>`,
+  await resend.emails.send({
+    from: "Memento <onboarding@resend.dev>",
     to,
     subject: "Reset your Memento password",
     html: `
+      <h2>Password Reset</h2>
       <p>Click below to reset your password:</p>
       <a href="${link}">${link}</a>
-      <p>This link expires in 15 minutes.</p>
-    `
+    `,
   });
 };
