@@ -51,7 +51,7 @@ export const forgotPassword = async (req, res) => {
   user.resetTokenExpiry = Date.now() + 15 * 60 * 1000;
   await user.save();
 
-  await sendResetEmail(user.email, `http://localhost:5173/reset/${token}`);
+  await sendResetEmail(user.email, `${process.env.FRONTEND_URL}/reset/${token}`);
 
   res.json({ msg: "Reset link sent" });
 };
