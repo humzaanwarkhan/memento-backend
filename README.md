@@ -2,6 +2,8 @@
 
 Memento is a privacy-focused personal memory & notes management application designed to protect user data through strong authentication mechanisms and secure backend practices.
 
+WEBSITE LIVE AT: https://memento-frontend-phi.vercel.app/
+
 ## Why Memento is Secure
 
 Memento is not just another notes app — it is built with a **security-first mindset**.
