@@ -40,4 +40,4 @@ Memento was built to:
 
 **Humza Anwar Khan**  
 Backend Developer & Application Security Enthusiast  
-GitHub: https://github.com/humzaanwarkhan
+LinkedIn - linkedin.com/in/humza-anwar-khan
